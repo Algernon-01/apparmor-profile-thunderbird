@@ -1,0 +1,24 @@
+## This file is part of Whonix.
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+Source: apparmor-profile-thunderbird
+Section: misc
+Priority: optional
+Maintainer: Patrick Schleizer <adrelanos@riseup.net>
+Build-Depends: debhelper (>= 9), genmkfile, dh-apparmor, config-package-dev, ruby-ronn
+Homepage: https://www.whonix.org/wiki/AppArmor
+Vcs-Browser: https://github.com/Whonix/apparmor-profile-thunderbird
+Vcs-Git: https://github.com/Whonix/apparmor-profile-thunderbird.git
+Standards-Version: 3.9.8
+
+Package: apparmor-profile-thunderbird
+Architecture: all
+Depends: ${misc:Depends}, apparmor, thunderbird
+Provides: ${diverted-files}
+Conflicts: ${diverted-files}
+Description: AppArmor profile for Thunderbird aka icedove.
+ An AppArmor profile to confine Thunderbird on live systems. This profile
+ is developed by the Whonix team.
+ .
+ For better security.
